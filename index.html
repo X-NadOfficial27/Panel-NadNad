@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🛍️Panel By NadNad</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom, #0a0a23, #1e1e3f);
+      color: white;
+      padding: 20px;
+    }
+
+    .produk {
+      background: rgba(0, 0, 50, 0.7);
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 40px;
+      box-shadow: 0 0 20px rgba(0, 100, 255, 0.5);
+      transition: transform 0.8s ease, opacity 0.8s ease;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: masuk 1s ease forwards;
+    }
+
+    @keyframes masuk {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .produk h3 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .tombol-aksi {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 15px 0;
+    }
+
+    .tombol-aksi button {
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-hijau {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .btn-putih {
+      background-color: white;
+      color: black;
+    }
+
+    .btn-wa-tele {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .btn-wa-tele button {
+      flex: 1;
+      padding: 12px;
+      font-weight: bold;
+      border-radius: 10px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-wa {
+      background-color: #25D366;
+      color: white;
+    }
+
+    .btn-tele {
+      background-color: #0088cc;
+      color: white;
+    }
+
+    .laci {
+      max-height: 0;
+      overflow: hidden;
+      background-color: white;
+      color: black;
+      padding: 0 10px;
+      border-radius: 10px;
+      transition: max-height 0.8s ease, padding 0.8s ease;
+      margin-bottom: 10px;
+    }
+
+    .laci.show {
+      max-height: 50000px;
+      padding: 15px 10px;
+    }
+
+    .feedback-form {
+      background: rgba(0, 0, 50, 0.7);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 100, 255, 0.4);
+    }
+
+    .feedback-form h3 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    .feedback-form textarea {
+      width: 100%;
+      padding: 15px;
+      border-radius: 10px;
+      border: none;
+      resize: none;
+      font-size: 15px;
+      margin: 10px 0;
+    }
+
+.artikel {
+      margin-top: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+  
+  </style>
+   <script>
+    function toggleLaci(button, idLaci) {
+      const laci = document.getElementById(idLaci);
+      laci.classList.toggle("show");
+    }
+  </script>
+</head>
+<body>
+<!-- Teks Pembuka Sebelum Produk -->
+<section style="padding: 50px 20px; text-align: center; background: transparent;">
+  <h1 style="font-size: 32px; margin-bottom: 10px; font-weight: bold;">
+    🎊 selamat datang 🎊</h1>
+    <h1 style="font-size:32px; margin-bottom:10px; font-weight: bold;">
+    <h1>✨ Di Store By NadNad ✨</h1>
+  </h1>
+  <p style="font-size: 20px; margin-bottom: 5px;">
+    Scroll ke bawah untuk melihat produk Panel kami
+  </p>
+  <p style="font-size: 18px; color: #444;">
+    Temukan berbagai pilihan Panel Mulai Dari, 1GB - unlimited Yang berkualitas, dan siap dikirim langsung ke kamu.
+  </p>
+</section>
+
+  <!-- Produk A-->
+  <div class="produk">
+    <h3>📦 OPEN PANEL HIGH QUALITY🚀</h3>
+    <div class="tombol-aksi">
+      <button class="btn-hijau" onclick="toggleLaci(this, 'hargaA')">Lihat Harga</button>
+      <div id="hargaA" class="laci">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br/>🛒LIST ORDER PANEL HIGH QUALITY 🚀⬇️<br/>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br/>• RAM 1GB CPU 40%=Rp.2.000<br/>• RAM 2GB CPU 60%=Rp 3.000<br/>• RAM 3GB CPU 80%= Rp 4.000<br/>• RAM 4GB CPU 100%= Rp 5.000<br/>• RAM 5GB CPU 120%= Rp 6.000<br/>• RAM 6GB CPU 140%= Rp 7.000<br/>• RAM 7GB CPU 160%= Rp 8.000<br/>• RAM 8GB CPU 180%= Rp 9.000<br/>• RAM 9GB CPU 200%= Rp 10.000<br/>• RAM UNLIMITED CPU UNLIMITED= Rp.12.000</div>
+      <button class="btn-putih" onclick="toggleLaci(this, 'penjelasanA')">Lihat Penjelasan</button>
+      <div id="penjelasanA" class="laci">      ━━━━━━━━━━━━━━━━━━<br/>⭕BENEFIT PANEL 🚀<br/>━━━━━━━━━━━━━━━━━━<br/>• SPEK PANEL R32 C8<br/>• NO PT PT<br/>• ANTI DELETE<br/>• SERVER TERJAGA<br/>• ANTI INTIP SCRIPT<br/>• SC MU ANTI KECOLONG<br/>• SERVER ANTI DELAY² HIGH QUALITY<br/>• BERGARANSI 30 H"ARI<br/>• ADA HARGA ADA KUALITAS</div>
+      </div>
+      
+  <div class="btn-wa-tele">
+  <a href="https://wa.me/6282295769441?text=Hallo%20Min%20Mau%20Order%20Panel🙏%" target="_blank">
+    <button class="btn-wa">💬=Order WhatsApp</button>
+  </a>
+  <a href="https://t.me/@XNadNad?text=Halo%20Min%20%20Mau%20Order%20Panel🙏%" target="_blank">
+    <button class="btn-tele">💬Order Telegram</button>
+  </a>
+</div>
+ </div>
+  <!-- Produk F-->
+  <div class="produk">
+    <h3>📦 OPEN ADMIN PANEL 🚀</h3>
+    <div class="tombol-aksi">
+      <button class="btn-hijau" onclick="toggleLaci(this, 'hargaF')">Lihat Harga</button>
+      <div id="hargaF" class="laci">🛒 LIST ADMIN PANEL HARGA : 18.000</div>
+      
+    <button class="btn-putih" onclick="toggleLaci(this, 'penjelasanF')">Lihat Penjelasan</button>
+      <div id="penjelasanF" class="laci">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br/>⭕ BENEFIT JOIND ADMIN PANEL⬇️<br/>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br/>• SPEK RAM 32 CORE 8 HIGH QUALITY<br/>• ANTI DELAY²<br/>• BISA BUAT PANEL<br/>• BISA BALMOD KALO USAHA<br/>• BISA BUAT PANEL 1GB - UNLIMITED<br/>• BISA BUAT PANEL PRIBADI<br/>• BISA CREATE PANEL SENDIRI</div>
+       </div>
+    <div class="btn-wa-tele">
+  <a href="https://wa.me/6282295769441?text=Hallo%20Min%20Saya%20Mau%Order%Admin%20Panel%20" target="_blank">
+    <button class="btn-wa">💬Order WhatsApp</button>
+  </a>
+  <a href="https://t.me/@XNadNad?text=Hallo%20Min%20Saya%20Mau%Order%Admin%20Panel%20" target="_blank">
+    <button class="btn-tele">💬Order Telegram</button>
+  </a>
+</div>
+  </div>
+<!-- Produk B-->
+  <div class="produk">
+    <h3>📦 OPEN PT PANEL 🚀</h3>
+    <div class="tombol-aksi">
+      <button class="btn-hijau" onclick="toggleLaci(this, 'hargaB')">Lihat Harga</button>
+      <div id="hargaB" class="laci">🛒 LIST PT PANEL HARGA : 25.000</div>
+      
+    <button class="btn-putih" onclick="toggleLaci(this, 'penjelasanB')">Lihat Penjelasan</button>
+      <div id="penjelasanB" class="laci">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br/>⭕ BENEFIT JOIND PT PANEL⬇️<br/>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br/>• SPEK RAM 32 CORE 8<br/>• ANTI DELAY²<br/>• BISA OPEN ADP<br/>• BISA OPEN RESELLER PANEL<br/>• BISA BUAT PANEL SENDIRI<br/>• BISA BALMOD KALO USAHA<br/>• BISA BUAT PANEL 1GB - UNLIMITED<br/>• BISA CREATE PANEL SENDIRI</div>
+    </div>
+
+    <div class="btn-wa-tele">
+  <a href="https://wa.me/6282295769441?text=Hallo%20Min%20Saya%20Mau%Order%PT%20Panel%20" target="_blank">
+    <button class="btn-wa">💬Order WhatsApp</button>
+  </a>
+  <a href="https://t.me/@XNadNad?text=Hallo%20Min%20Saya%20Mau%Order%PT%20Panel%20" target="_blank">
+    <button class="btn-tele">💬Orde Telegram</button>
+  </a>
+</div>
+ </div> 
+  <!-- Produk C-->
+<div class="produk">
+  <h3>📦 OPEN RESELLER PANEL🚀</h3>
+  <div class="tombol-aksi">
+    <button class="btn-hijau" onclick="toggleLaci(this, 'hargaC')">Lihat Harga</button>
+    <div id="hargaC" class="laci">🛒 LIST RESELLER PANEL HARGA : 15.000</div>
+    
+    <button class="btn-putih" onclick="toggleLaci(this, 'penjelasanC')">Lihat Penjelasan</button>
+    <div id="penjelasanC" class="laci">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br/>⭕ BENEFIT JOIND RESELLER PANEL⬇️<br/>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br/>• VPS RAM 32 CORE 8<br/>• ANTI DELAY²<br/>• BISA BUAT PANEL SENDIRI<br/>• BISA JUAL PANEL SENDIRI<br/>• BISA BALMOND KALO USAHA<br/>• BISA BUAT PANEL 1GB - UNLIMITED</div>
+  </div>
+  
+  <div class="btn-wa-tele">
+    <a href="https://wa.me/6282295769441?text=Hallo%20Min%20Saya%20Mau%Order%reseller%20Panel%20" target="_blank">
+      <button class="btn-wa">💬Order WhatsApp</button>
+    </a>
+    <a href="https://t.me/@XNadNad?text=Hallo%20Min%20Saya%20Mau%Order%reseller%20Panel%20" target="_blank">
+      <button class="btn-tele">💬Orde Telegram</button>
+    </a>
+  </div>
+</div>
+ </div>
+  </div>
+<!-- Artikel Penutup -->
+<section id="penutup" style="padding: 40px; background: transparent; text-align: center; border-top: 2px solid #ddd;">
+  <h2 style="margin-bottom: 20px;">📌 Artikel Store By NadNad ✨</h2>
+  <p style="font-size: 18px; line-height: 1.6; max-width: 800px; margin: auto;">
+    Terima kasih banyak telah mengunjungi <strong>Store by NadNad</strong>.<br>
+    Kami sangat menghargai setiap kunjungan dan perhatianmu terhadap Panel-Panel yang kami tawarkan.<br><br>
+    Jika ada pertanyaan, masukan, atau kamu tertarik dengan salah satu Panel kami,<br>
+    jangan ragu untuk menghubungi kami. Kami siap membantu dengan sepenuh hati,<br>
+    baik melalui <strong>WhatsApp</strong> maupun <strong>Telegram</strong>.<br><br>
+    🛍️ Semoga kamu menemukan Panel Yang cocok dan bermanfaat dari toko kami.<br>
+    Sampai jumpa di transaksi selanjutnya, dan semoga harimu menyenangkan!
+  </p>
+  </div>
+</section>
+
+
+</body>
+                                                                                                                                                                                                                                                                                                                                                                                         </html>
